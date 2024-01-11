@@ -2,6 +2,9 @@
 
 require_once ('models/Post.class.php');
 
+
+//Test pour voir
+
 ob_start(); // start c'est comme une banane dans le pot d'échappement de PHP
 ?>
 <h1>Blog</h1>
