@@ -15,3 +15,4 @@ class BlogController
         require_once('views/blog.view.php');
     }
 }
+//test
