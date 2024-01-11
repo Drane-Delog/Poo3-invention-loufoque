@@ -2,6 +2,6 @@
 ?>
 <h1>Index (accueil)</h1>
 <?php
-$title = 'Accueil - site de YY';
+$title = 'Accueil - site de Jules';
 $content = ob_get_clean(); // clean c'est comme retirer la banane du pot d'échappement
 require_once 'template.php';

@@ -1,6 +1,6 @@
 <?php
 
-require_once ('models/Post.class.php');
+require_once ('model/Post.class.php');
 
 
 //Test pour voir
@@ -34,6 +34,6 @@ ob_start(); // start c'est comme une banane dans le pot d'échappement de PHP
 <?php } ?>
 <a href="#"><button type="button" class="btn btn-secondary">Ajouter un post</button></a>
 <?php
-$title = 'Blog';
+$title = 'Invention';
 $content = ob_get_clean(); // clean c'est comme retirer la banane du pot d'échappement
 require_once 'template.php';

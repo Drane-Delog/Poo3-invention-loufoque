@@ -21,7 +21,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./blog.php">Blog</a>
+          <a class="nav-link" href="./Invention.php">Invention loufoques</a>
         </li>
       </ul>
       <form class="d-flex">

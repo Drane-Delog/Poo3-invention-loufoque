@@ -10,8 +10,8 @@ switch (@$_GET['action']) {
     case 'accueil':
         require_once 'views/accueil.view.php';
         break;
-    case 'blog':
-        require_once 'controllers/Blog.controller.php';
+    case 'Invention':
+        require_once 'controllers/Invention.controller.php';
         $blogController = new BlogController();
         $blogController->displayPosts();
         break;

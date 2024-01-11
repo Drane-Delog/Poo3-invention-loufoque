@@ -1,5 +1,5 @@
 <?php
-require_once('models/PostManager.class.php');
+require_once('model/PostManager.class.php');
 class BlogController
 {
     private $postManager; // permet d'accéder aux méthodes de la classe PostManager
@@ -12,6 +12,6 @@ class BlogController
     {
         global $posts; // on récupère la variable globale $posts en la créant dans l'espace de nom global
         $posts = $this->postManager->getPosts(); // on récupère les posts depuis la base de données
-        require_once('views/blog.view.php');
+        require_once('views/Invention.view.php');
     }
 }
