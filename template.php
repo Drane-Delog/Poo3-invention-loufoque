@@ -1,3 +1,12 @@
+<?php
+//liste de liens avec URL et label (titre)
+$ListeLiens = [
+    'accueil' => './Accueil',
+    'Invention' => './Invention',
+    'Contact' => './Contact'
+    ] ;
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -15,14 +24,33 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarColor02">
       <ul class="navbar-nav me-auto">
+        <?php
+        foreach ($ListeLiens as $label => $url) {
+            echo "<li class='nav-item'><a class='nav-link' href='$url'>$label</a></li>";
+        ?>
+
         <li class="nav-item">
-          <a class="nav-link active" href="./">Accueil
-            <span class="visually-hidden">(actif)</span>
-          </a>
+          
+          <a 
+          class="nav-link" <?php
+
+          //strtolower() permet de mettre en minuscule
+          //ca permet de comparer par ex Accueil et accueil
+
+          if (strtolower($titre) === $_GET['action']) {
+              echo 'active';
+
+              //active permet de mettre en surbrillance le lien actif
+              //sinon ca ferait class="nav-linkactive"
+          }
+          ?>
+
+           href="./Invention.php">Invention loufoques</a>
+
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="./Invention.php">Invention loufoques</a>
-        </li>
+        <?php
+        }
+        ?>
       </ul>
       <form class="d-flex">
         <input class="form-control me-sm-2" type="search" placeholder="Search">
