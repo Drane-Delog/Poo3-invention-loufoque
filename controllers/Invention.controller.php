@@ -10,15 +10,16 @@ class Invention_controller
     }
     public function displayPosts()
     {
-        global $posts; // on récupère la variable globale $posts en la créant dans l'espace de nom global
-        $posts = $this->postManager->getPosts(); // on récupère les posts depuis la base de données
+        global $post; // on récupère la variable globale $posts en la créant dans l'espace de nom global
+        $post = $this->postManager->getPosts(); // on récupère les posts depuis la base de données
         require_once('views/Invention.view.php');
     }
 
-    public function displaySinglePosts()
+    public function displaySinglePosts($id)
     {
         global $posts;
-        $posts = $this->postManager->getPosts(); 
+        $posts = $this->postManager->getPostById
+        ($id); 
         require_once('views/Invention.view.php');
     }
 }

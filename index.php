@@ -68,7 +68,7 @@ switch (@$_GET['action']) {
         $Invention_Controller = new Invention_controller();
 
         if ($action === 'lire') {
-            $Invention_Controller->displaySinglePosts();
+            $Invention_Controller->displaySinglePosts($id);
             break;
         }
 

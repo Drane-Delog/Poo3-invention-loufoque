@@ -25,9 +25,13 @@ class PostManager extends Model { // le extends ajoute les propriétés et méth
 
         $req = $this->getBdd()->prepare('SELECT * FROM posts WHERE id = ?');
         $req->execute([$id]);
-        $post = $req->fetch(PDO::FETCH_ASSOC);  
+        $req->bindValue(':id', $id, PDO::PARAM_INT);
+        $req->execute();
+        $post = $req->fetch(PDO::FETCH_ASSOC);
+        
+        
         return new Post(
-            $post['id'],
+            $post['id'], // champ de la table posts
             $post['title'],
             $post['header'],
             $post['author'],
@@ -35,5 +39,6 @@ class PostManager extends Model { // le extends ajoute les propriétés et méth
             $post['body'],
             $post['date']
         );
+        
     }
 }
