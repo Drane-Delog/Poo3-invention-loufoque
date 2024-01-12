@@ -39,7 +39,7 @@ $ListeLiens = [
           //strtolower() permet de mettre en minuscule
           //ca permet de comparer par ex Accueil et accueil
 
-          if (strtolower($titre) === $_GET['action']) {
+          if (strtolower($titre) === @$_GET['action']) {
               echo 'active';
 
               //active permet de mettre en surbrillance le lien actif

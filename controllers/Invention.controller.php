@@ -1,6 +1,6 @@
 <?php
 require_once('model/PostManager.class.php');
-class BlogController
+class Invention_controller
 {
     private $postManager; // permet d'accéder aux méthodes de la classe PostManager
     public function __construct()
@@ -14,5 +14,11 @@ class BlogController
         $posts = $this->postManager->getPosts(); // on récupère les posts depuis la base de données
         require_once('views/Invention.view.php');
     }
+
+    public function displaySinglePosts()
+    {
+        global $posts;
+        $posts = $this->postManager->getPosts(); 
+        require_once('views/Invention.view.php');
+    }
 }
-//test
