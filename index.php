@@ -40,6 +40,7 @@ $url = explode(
         $controller = 'accueil';
         $action = 'accueil';
         $id = null;
+        echo "<br>404</br>";
     }
 
     echo "<pre>";
@@ -69,6 +70,9 @@ switch (@$_GET['action']) {
 
         if ($action === 'lire') {
             $Invention_Controller->displaySinglePosts($id);
+            break;
+        } elseif ($action === 'add') {
+            $Invention_Controller->displayAddPost();
             break;
         }
 

@@ -32,7 +32,7 @@ ob_start(); // start c'est comme une banane dans le pot d'échappement de PHP
     </div>
 </div>
 <?php } ?>
-<a href="#"><button type="button" class="btn btn-secondary">Ajouter un post</button></a>
+<a href="./Invention/add"><button type="button" class="btn btn-secondary">Ajouter un post</button></a>
 <?php
 $title = 'Invention';
 $content = ob_get_clean(); // clean c'est comme retirer la banane du pot d'échappement

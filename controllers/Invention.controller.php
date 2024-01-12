@@ -22,4 +22,12 @@ class Invention_controller
         ($id); 
         require_once('views/Invention.view.php');
     }
+
+    public function displayAddPost()
+    {
+        require_once('views/AddPost.view.php');
+    }
+
+
+
 }
