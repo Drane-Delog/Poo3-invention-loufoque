@@ -1,4 +1,6 @@
 <?php
+
+// activer les messages d'erreur
 //liste de liens avec URL et label (titre)
 $ListeLiens = [
     'accueil' => './Accueil',
